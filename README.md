@@ -6,7 +6,7 @@ Assessment 3 - Database Modeling
 
 Backstory
 ---------
-Fast forward 10 weeks. You've finished Code Platoon and you are going to create a website for artists to sell their goods directly to consumers. The first thing you need to do? Design a basic schema!
+Fast forward 10 weeks. You've finished Code Platoon and you are going to create a ecommerce website for creators to sell their goods directly to consumers. The first thing you need to do? Design a basic schema!
 
 Your client has said that they want to store Customers, Orders, Products, and Categories (e.g., a Pencil `Product` is under the Home Office `Category`. You are not limited to this number of tables, but have to have them at a minimum.
 
