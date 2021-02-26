@@ -2,7 +2,7 @@ Assessment 3 - Database Modeling
 --------------------------------
 ## Rubric
 * Click [here](https://docs.google.com/spreadsheets/d/1zU9ZkwPn5aWxIuC7NJrxr7fBNvUwjQYFm6hZje-_cZE/edit#gid=0) to see what I am grading you on
-* Due Monday, 11/2 at 8:30 AM CST
+* Due Monday, 3/1 at 8:30 AM CST
 
 Backstory
 ---------
