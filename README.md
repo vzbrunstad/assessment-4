@@ -1,39 +1,22 @@
-Assessment 3 - Database Modeling
---------------------------------
-## Rubric
-* Click [here](https://docs.google.com/spreadsheets/d/1zU9ZkwPn5aWxIuC7NJrxr7fBNvUwjQYFm6hZje-_cZE/edit#gid=0) to see what I am grading you on
-* Due Monday, 3/1 at 8:30 AM CST
+# Assessment 3: Django
 
-Backstory
----------
-Fast forward 10 weeks. You've finished Code Platoon and you are going to create a ecommerce website for creators to sell their goods directly to consumers. The first thing you need to do? Design a basic schema!
+## Important Grading Information
+* TODO PUT RUBRIC HERE
+* This assessment is worth 15% of your final grade. You need to get a 75% or better to pass.
+* If you fail the assessment, you will have one week to retake it for a 10% penalty. We will not regrade passing assessments.
 
-Your client has said that they want to store Customers, Orders, Products, and Categories (e.g., a Pencil `Product` is under the Home Office `Category`. You are not limited to this number of tables, but have to have them at a minimum.
+## Rules / Process
+* This test is fully open notes and open Google, but is not to be completed with other students
+* Do not open a pull request against this repository. We will evaluate your code individually with you.
 
-For this assessment, you have your choice of using raw SQL or Python/SQL together. If you want to finish this assessment using raw SQL, please look in the `sql/` folder. If you want to finish this assessment using Python/SQL, please look in the `python/` folder.
+## Challenge
+Everyone loves going on Craigslist to find interesting people and interesting items. The joy of Craigslist is that it doesn't upgrade itself to stay up to date with the times - its the same old Craigslist that everyone knows and loves. This works out well for us as our client has asked for no styling. The core schema has also remained relatively unchanged over the years. Today, you will build a basic Craigslist CRUD app with nested routes. We will call this Craigslist Junior.
 
-`schema.sql` / `schema_creation.py`
-------------
-- Create the tables and appropriate relationships for the tables above.
-  - Customers have first and last names, dates of birth, addresses, and email addresses
-  - Categories have names
-  - Products have names and prices
-  - An order must be able to contain multiple products
-
-**Hints**
-  - Consider the order of tables when you create them
-  - Remember to have drop table statements if you're running things over and over again
-  - You are going to need join tables
-
-`seeds.sql` / `seeds.py`
------------
-- Create & insert at least 3 records for each table.
-
-`queries.sql` / `queries.py`
--------------
-- Retrieve the customers with a Gmail email address
-- Retrieve the customers under 25 years old
-- Retrieve customer ID 2's orders
-- Retrieve customer ID 2's purchased products
-- Retrieve all the products under a the "Home Office" category
-- Retrieve all the orders that have a product which belongs to the "Kitchen" category
+Here are a list of the routes you will need to build:
+* `/categories`: A list of all the categories
+* `/categories/new`: The form for a new category
+* `/categories/:id`: See a specific category and a list of all of its associated posts
+* `/categories/:id/edit`: Edit page for a specific category (also the ability to update/destroy categories)
+* `/categories/:category_id/posts/new`: The form for a new post under a specific category
+* `/categories/:category_id/posts/:post_id`: See a specific post for a specific category, have the ability go back to all of the post's category's other posts (`/categories/:category_id/posts`)
+* `/categories/:category_id/posts/:post_id/edit`: Edit page for a specific post under a specific category (Also, the ability to update/destroy posts)
