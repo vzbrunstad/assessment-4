@@ -3,27 +3,30 @@
 
 ## Important Grading Information
 - Make sure you read the [Assessment-4 Grading Rubric](https://docs.google.com/spreadsheets/d/11bCD5tstmbPhq8eqQD6NswuFOhiBLEBZv56ujREpPtQ/edit?usp=sharing).
+  - Django Front-End (50%)
+  - Django Back-End (40%)
+  - Code Style (10%) 
 - This assessment is worth 15% of your final grade. You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
 - If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
   - 5% penalty: If you complete and submit the retake within **one week** of receiving your grade. 
   - 10% penalty: If you complete and submit the retake afterwards.
 
 ## Rules / Process
-- This test is fully open notes and open Google, but is not to be completed with other students
+- This test is fully open notes and open Google, but is not to be completed with the help of other students/individuals
 - Do not open a pull request against this repository. We will evaluate your code individually with you.
 
 ## Requirements
 - This assessment must be completed using Django. 
-- You may use either SQLite3 or PostgreSQL for your database.
+- You may use either SQLite3 or PostgreSQL for your database. (SQLite3 preferred)
 
 ## Challenge
-Everyone loves going on Craigslist to find interesting people and interesting items. The joy of Craigslist is that it doesn't upgrade itself to stay up to date with the times - its the same old Craigslist that everyone knows and loves. This works out well for us as our client has asked for no styling. The core schema has also remained relatively unchanged over the years. Today, you will build a basic Craigslist CRUD app with nested routes. We will call this Craigslist Junior.
+Everyone loves going on Craigslist to find interesting people and interesting items. The joy of Craigslist is that it doesn't upgrade itself to stay up to date with the times - it's the same old Craigslist that everyone knows and loves. The core schema has also remained relatively unchanged over the years. Today, you will build a basic Craigslist CRUD app with nested routes. We will call this site: Craigslist Junior.
 
 Here are a list of the routes you will need to build:
-- `/categories`: A list of all the categories
-- `/categories/new`: The form for a new category
-- `/categories/:id`: See a specific category and a list of all of its associated posts
-- `/categories/:id/edit`: Edit page for a specific category (also the ability to update/destroy categories)
-- `/categories/:category_id/posts/new`: The form for a new post under a specific category
-- `/categories/:category_id/posts/:post_id`: See a specific post for a specific category, have the ability go back to all of the post's category's other posts (`/categories/:category_id/posts`)
-- `/categories/:category_id/posts/:post_id/edit`: Edit page for a specific post under a specific category (Also, the ability to update/destroy posts)
+- `/categories`: A page listing all the categories
+- `/categories/new`: A page with a form to create a new category
+- `/categories/:category_id`: A page to view the detail of a specific category and a list of all of its associated posts
+- `/categories/:category_id/edit`: A page with a form to update a specific category, with current values filled in already. Also include the ability to delete the specific category here. Both actions should automatically reroute to another new page, if successful, or display an error message if unsuccessful.
+- `/categories/:category_id/posts/new`: A page with a form to create a new post, under the current category by default.
+- `/categories/:category_id/posts/:post_id`: A page to view the detail of a specific post. Also include the ability go back to the parent category detail page (`/categories/:category_id/`)
+- `/categories/:category_id/posts/:post_id/edit`: A page with a form to update a specific post, with current values filled in already. Also include the ability to delete the specific post here. Both actions should automatically reroute to another page, if successful, or display an error message if unsuccessful.
