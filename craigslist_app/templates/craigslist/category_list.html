@@ -1,0 +1,16 @@
+{% extends 'craigslist/base.html' %}
+
+  {% block title %}
+  <br>
+  <h1>Welcome to Craigslist. Below is a listing of all current categories.</h1>
+  {% endblock %}
+
+  {% block content %}
+    {% for category in category_list %}
+    <div>
+        <li><a href="{% url 'craigslist:category_detail' category_id=category.id %}">{{ category.name }}</a></li>
+    </div>
+    
+    {% endfor %}
+    <a href="{% url 'craigslist:category_new' %}">New</a>
+  {% endblock %}
