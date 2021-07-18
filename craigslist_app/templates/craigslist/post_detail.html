@@ -11,7 +11,11 @@
   {% block content %}
     <div id='main'>
       <div id='main-left'>
-        <a>Description: {{ post.description }}</a>
+        <a>Date Posted: {{ post.date }}</a>
+        <br>
+        <a>Location:    {{ post.location }}</a>
+        <br>
+        <a>Description: {{ post.description }} </a>
       </div>
       <div id='main-right'>
         <a href="{% url 'categories:post_edit' category_id=category.id post_id=post.id%}">Edit Post</a>

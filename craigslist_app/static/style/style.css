@@ -52,6 +52,7 @@
 #main-left {
   width: 650px;
   background-color: #CCCCCC;
+  text-align: left;
 }
 
 #main-right {

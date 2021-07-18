@@ -9,4 +9,4 @@ class CategoryForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('item', 'description')
+        fields = ('item', 'description', 'location') #date field left off of form so user does not have access
