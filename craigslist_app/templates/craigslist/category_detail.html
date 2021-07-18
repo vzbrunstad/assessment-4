@@ -1,20 +1,28 @@
 {% extends 'craigslist/base.html' %}
 
+{% block back %}
+<a href="{% url 'categories:category_list' %}">Back</a>
+{% endblock %}
   {% block title %}
   <br>
-  <h1>Category: {{ category.name }}</h1><a href="{% url 'craigslist:category_edit' category_id=category.id%}">Edit Category</a>
-  <a href="{% url 'craigslist:category_delete' category_id=category.id%}">Delete Category</a>
+  <span><h1>Category: {{ category.name }}</h1></span>
+  <span><a href="{% url 'categories:category_edit' category_id=category.id%}">Edit Category</a></span>
+  <a href="{% url 'categories:category_delete' category_id=category.id%}">Delete Category</a>
   {% endblock %}
 
   {% block content %}
 
-    <ul>
-    {% for post in posts %}
-        <li><a href="{% url 'craigslist:post_show' category_id=category.id post_id=post.id %}">{{ post.item}}</a></li>
-    {% endfor %}
-    </ul> 
-    <a href="{% url 'craigslist:post_new' category_id=category.id%}">New Post</a>
-    
-
+    <div id='main'>
+      <div id='main-left'>
+        <ul>
+          {% for post in posts %}
+            <li><a href="{% url 'categories:post_detail' category_id=category.id post_id=post.id %}">{{ post.item}}</a></li>
+          {% endfor %}
+        </ul> 
+      </div>
+      <div id='main-right'>
+        <a href="{% url 'categories:post_new' category_id=category.id%}">New Post</a>
+      </div>
+    </div>
   {% endblock %}
 

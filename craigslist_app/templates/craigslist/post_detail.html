@@ -1,0 +1,22 @@
+{% extends 'craigslist/base.html' %}
+
+  {% block back %}
+    <a href="{% url 'categories:category_detail' category_id=category.id %}">Back</a>
+  {% endblock %}
+
+  {% block title %}
+  <br>
+  <h1>Item: {{ post.item }}</h1>
+  {% endblock %}
+  {% block content %}
+    <div id='main'>
+      <div id='main-left'>
+        <a>Description: {{ post.description }}</a>
+      </div>
+      <div id='main-right'>
+        <a href="{% url 'categories:post_edit' category_id=category.id post_id=post.id%}">Edit Post</a>
+        <br>
+        <a href="{% url 'categories:post_delete' category_id=category.id post_id=post.id%}">Delete Post</a>
+      </div>
+    </div>
+  {% endblock %}

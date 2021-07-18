@@ -1,5 +1,9 @@
 {% extends 'craigslist/base.html' %}
 
+  {% block back %}
+  <a href="{% url 'categories:category_list' %}">Back</a>
+  {% endblock %}
+
  {% block content %}
      <form method="POST">
          {% csrf_token %}

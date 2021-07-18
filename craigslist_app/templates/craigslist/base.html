@@ -11,18 +11,26 @@
   <title>Craigslist Jr</title>
 </head>
 <body>
-  <div id="navbar">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-  </div>
-  {% block title %}
-  {% endblock %}
-  <br>
-  <br>
-  {% block content %}
-  {% endblock %}
-  <br>
-  <br>
+  
+  <div id="container">
+    <h1 id=title>craigslist jr</h1>
+    <div id="navbar">
+      <a href="{% url 'categories:category_list' %}">Categories List</a>
+      {% block back %}
+      {% endblock %}
+      
+
+    </div>
+    {% block title %}
+    {% endblock %}
+    <br>
+    <br>
+
+    {% block content %}
+    {% endblock %}
+
+    <br>
+    <br>
+    </div>
 </body>
 </html>

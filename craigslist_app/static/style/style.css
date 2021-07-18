@@ -1,7 +1,19 @@
 /* Style the navbar */
+#container {
+  display: flex;
+  flex-flow: column;
+  align-items: center; 
+  text-align: center;
+}
+#title{
+  font-size:1in;
+  color: blue;
+}
+
 #navbar {
   overflow: hidden;
   background-color: #333;
+  width:100%;
 }
 
 /* Navbar links */
@@ -29,4 +41,20 @@
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+}
+
+#main {
+  background-color: #77DDFF;
+  display: flex;
+  width:900px
+}
+
+#main-left {
+  width: 650px;
+  background-color: #CCCCCC;
+}
+
+#main-right {
+  width: 100%;
+  background-color: #FF8833;
 }

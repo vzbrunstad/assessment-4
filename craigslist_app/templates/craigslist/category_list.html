@@ -6,11 +6,16 @@
   {% endblock %}
 
   {% block content %}
-    {% for category in category_list %}
-    <div>
-        <li><a href="{% url 'craigslist:category_detail' category_id=category.id %}">{{ category.name }}</a></li>
+    <div id='main'>
+      <div id='main-left'>
+        {% for category in category_list %}
+        <div>
+            <li><a href="{% url 'categories:category_detail' category_id=category.id %}">{{ category.name }}</a></li>
+        </div>
+        {% endfor %}
+      </div>
+      <div id='main-right'>
+        <a href="{% url 'categories:category_new' %}">Create New Post</a>
+      </div>
     </div>
-    
-    {% endfor %}
-    <a href="{% url 'craigslist:category_new' %}">New</a>
   {% endblock %}
